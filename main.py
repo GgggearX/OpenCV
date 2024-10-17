@@ -6,7 +6,7 @@ from paddleocr import PaddleOCR, draw_ocr
 import matplotlib.pyplot as plt
 
 # 初始化PaddleOCR，支持中英文混合识别
-ocr = PaddleOCR(use_angle_cls=True, lang='ch', drop_score=0.5, show_log=False)
+ocr = PaddleOCR(use_angle_cls=True, lang='ch', drop_score=0.7, show_log=False)
 
 # 确保 output 文件夹存在
 output_dir = 'output'
@@ -54,7 +54,7 @@ def ocr_detection_and_recognition(image):
     boxes = []
     texts = []
     scores = []
-    confidence_threshold = 0.5  # 设定置信度阈值
+    confidence_threshold = 0.7  # 设定置信度阈值
 
     # 输出PaddleOCR的结果以供调试
     print(f"OCR 识别结果 (原始数据): {result}")
